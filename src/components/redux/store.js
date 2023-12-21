@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import todoReducer from "./slice/todo.js";
 
 const rootReducer = {
-    todo: todoReducer
+    todo: todoReducer,
 }
 
 const store = configureStore({

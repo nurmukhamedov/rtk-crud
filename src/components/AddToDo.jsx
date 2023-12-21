@@ -2,11 +2,13 @@ import { useState } from "react"
 import { Button, Form } from "react-bootstrap";
 import { useDispatch } from "react-redux";
 
-import { addToDo } from "./redux/slice/todo";
+import { addToDo, removeToDo } from "./redux/slice/todo";
 
 
 const AddToDo = () => {
     const [todo, setToDo] = useState("");
+
+
 
     const dispatch = useDispatch();
 
@@ -23,6 +25,9 @@ const AddToDo = () => {
         dispatch(addToDo(newToDo));
         setToDo('');
     }
+
+
+
     return (
         <Form className="mb-4" onSubmit={handleSubmit}>
             <div className="d-flex">
