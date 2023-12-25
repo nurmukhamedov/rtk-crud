@@ -1,13 +1,14 @@
-import { configureStore } from '@reduxjs/toolkit';
+import { configureStore } from "@reduxjs/toolkit";
 
-import todoReducer from "./slice/todo.js";
+import getDataReducer from "./slice/fetchData";
 
-const rootReducer = {
-    todo: todoReducer,
-}
+
 
 const store = configureStore({
-    reducer: rootReducer
-});
+    reducer: {
+        getData: getDataReducer
+    }
+})
+
 
 export default store;

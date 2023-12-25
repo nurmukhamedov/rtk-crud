@@ -9,7 +9,6 @@ const ToDoItem = (todo) => {
     const dispatch = useDispatch()
     const handleClick = ({ id }) => {
         dispatch(updateStatus({ id }))
-        console.log('clicked');
     }
 
     console.log();
